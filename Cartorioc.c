@@ -115,10 +115,22 @@ int main()
     {
 	int opcao=0; //Definindo as variáveis
 	int x=1;
+	char senhadigitada[10]="a";
+	int comparacao;
 	
+	printf("### Cartório da EBAC ###\n\n");
+	printf("Login de administrador!\n\nDigite a sua senha: ");
+	scanf("%s",senhadigitada);
+	
+	comparacao = strcmp(senhadigitada, "admin");
+	
+	if(comparacao == 0)	
+	{
+	
+	system("cls");
 	for(x=1;x=1;)
     
-	{
+		{
 	
 		system("cls"); //responsavel por limpar a tela
 		
@@ -137,25 +149,25 @@ int main()
 	 	system("cls");
 	
 		    switch(opcao)
-	    {
-	    	case 1:
+	    	{
+	    		case 1:
 	    		registro(); //chamada de funções
 		        break;
 		        
-		    case 2:
+		    	case 2:
 		    	consulta(); //chamada de funções com inserção de cpf para saber suas informações
 		        break;
 		        
-		    case 3:
+		    	case 3:
 		    	deletar(); //função de deletar
 		        break;
 		        
-		    case 4:
-		    printf("Obrigado por utlizar o sistema!\n");
-		    return 0;
-		    break;
+		    	case 4:
+		    	printf("Obrigado por utlizar o sistema!\n");
+		    	return 0;
+		    	break;
 		    
-		    default:
+		    	default:
 		    	printf("Opção não disponível!\n");
 		        system("pause");
 		        break;
@@ -164,7 +176,9 @@ int main()
 		}
 
 	}
-	
+	else
+		printf("SENHA INCORRETA!");
+}	
 	
 
     
